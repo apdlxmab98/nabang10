@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>밤하늘</title>
+	<style type="text/css">
+		@font-face { font-family: 'KimNamyun'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KimNamyun.woff') format('woff'); font-weight: normal; font-style: normal; }
+		
+		body{margin:0; margin:auto; background:black;}
+		.wrap{height: 750px; background:#DDD; margin:auto;z-index:3;}
+		.wrap2{height: 750px; background:#DDD; margin:auto;z-index:3;}
+		#monitor{position: fixed; 
+					background-color: white; 
+					top: 0; 
+					right: 0; 
+					width: 70px;
+					height: 70px; 
+					padding: 5px; 
+					color: black;
+					opacity: 0;}
+		header, section, footer{margin:auto;}
+		section{width: 600px; margin:auto;}
+		section{background:black;}
+		.s1{width: 100%;background:black;
+			background:url(back1.jpg);
+			background-size: cover;
+			background-attachment: fixed;}
+		.s1 .wrap{width: 0px;}
+		.s2{ width: 100%;background:white;
+			background:url(back2.jpg);
+			background-size: cover;
+			background-attachment: fixed;}
+		.s2 .wrap2{ width:500px;background:white; opacity: 0.6;z-index:3;}
+		.s3{width: 100%;
+			background:url(back1.jpg);
+			background-size: cover;
+			background-attachment: fixed;}
+		.s3 .wrap{width:0px;background:black;margin:auto;}
+		.main{width: 400px; position: absolute; margin:auto; top: 110px; left: 90px;opacity: 0; }
+
+		@keyframes main{
+			from{left:0px; opacity: 0.2;}
+			to{left:60px;opacity: 0.95}
+		}
+		.cl2{width: 900px; position: absolute; margin:auto; top: 480px; right: 0px;opacity: 0; z-index: 6;}
+		@keyframes cl2{
+			from{right:60px; opacity: 0.2;}
+			to{right:80px;opacity: 0.93}
+		}
+		.cl1{width:600px; position: absolute; margin:auto; top: 10px; right: 80px;opacity: 0;}
+		@keyframes cl1{
+			from{ right:0px; opacity: 0.2;}
+			to{ right:80px;opacity: 0.8}
+		}
+		.cl3{width: 490px; position: absolute; margin:auto; top: 320px; left: 150px;opacity: 0;}
+		@keyframes cl3{
+			from{left:0px; opacity: 0.2;}
+			to{left:150px;opacity: 0.8}
+		}
+		.t1{width: 490px; position: absolute; margin:auto;text-align: center; margin-top: 150px ;margin-left: 5px;opacity: 0.8;}
+		.cir{width: 70px; height: 70px; background:#ebad12; position: absolute; border-radius: 50%;opacity: 0.35;left:30px;z-index: 1;margin-top:750px;animation: cir 1.2s infinite ease-in;}
+		.main2{width: 600px; position: absolute; margin:auto; top: 1600px; left:40px;opacity: 0; z-index: 8; animation: }
+		@keyframes main2{
+			from{left:0px; }
+			to{left:40px;}
+		}
+		.cl22{width: 650px; position: absolute; margin:auto; top: 1550px; right: 20px;opacity: 0; z-index:95;}
+		@keyframes cl22{
+			from{right:0px; opacity: 0.1;}
+			to{right:20px;opacity: 0.7}
+		}
+		.cl21{width:480px; position: absolute; margin:auto; top: 1520px; left: 30px;opacity: 0;z-index: 95;}
+		@keyframes cl21{
+			from{left:0px; opacity: 0.1;}
+			to{left:30px;opacity: 0.8}
+		}
+		.cl32{width: 680px; position: absolute; margin:auto; top: 1950px; left: 200px;opacity: 0;z-index: 9;}
+		@keyframes cl32{
+			from{left:180px; opacity: 0.1;}
+			to{left:150px;opacity: 0.85}
+		}
+		.rmflawk{width: 330px; position: absolute; margin:auto; top: 1710px; right: 80px;opacity: 0;z-index: 9;}
+		@keyframes rmflawk{
+			from{right:0px; opacity: 0.1;}
+			to{right:80px;opacity: 0.95}
+		}
+		@keyframes cir{
+			from{top:0px;}
+			to{top:700px;}
+		}
+		.star{width: 3px; border-radius: 60% 60% 10% 10%; height: 150px; background:#e6eef3; position: absolute; transform: rotate(-62deg); opacity: 0; top:20px;
+			animation: rr 1s infinite ease-in; left:20px;z-index:10}
+		@keyframes rr{
+			from{opacity:0;top: 1440px; left: 0px;} 
+			to{opacity: 0.9; top: 2100px; left: 1200px;} 
+		}
+		p{width: 500px; font-size: 25px; line-height: 1.6; text-align: right; position: absolute; color:#bfbfbf; top: 1915px; font-family: 'KimNamyun';word-spacing: 2;letter-spacing: 1px; opacity: 0;}
+		#section2{transition: all 1s; transform:rotate(0deg);}
+		.main2{opacity: 0.3;}
+		.main2:hover{opacity: 0.95;}
+		footer { width:400px; margin:auto; top: 20px; margin-bottom: 20px; z-index: 15;margin-left: 20px; position: static;opacity: 1;}
+		@font-face { font-family: 'S-CoreDream-4Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
+		footer p {font-family: 'S-CoreDream-4Regular';top:2270px;bottom: 20px; font-size:13px; text-align: left;  line-height: 1.8;color:#bfbfbf; opacity: 0.8;}
+	
+
+			
+	</style>
+
+</head>
+<body>
+	<section class="s1">
+		<img src="cl1.png" class="cl1" id="cl1">
+		<div class="wrap">
+			<img src="moon.png" class="main" id="main">
+			
+			<img src="cl2.png" class="cl2" id="cl2">
+			<img src="cl3.png" class="cl3" id="cl3">
+			</div>
+	</section>
+	<section class="s2">
+		
+		<div class="wrap2" id="section2">
+			<img src="t1.png" class="t1" id="t1">
+			
+		</div><div id="circle" class= "cir" ></div>
+	</section>
+	<section class="s3">
+		<div class="wrap">
+		<div class="star" id="star"></div>
+		<img src="moon.png" class="main2" id="main2">
+			<img src="cl11.png" class="cl21" id="cl21">
+			<img src="cl2.png" class="cl22" id="cl22">
+			<img src="cl3.png" class="cl32" id="cl32">
+		<p id="rmflawk">
+			이 밤 그날의 반딧불을<br>
+당신의 창 가까이 보낼게요<br>
+음 사랑한다는 말이에요<br>
+<br>
+나 우리의 첫 입맞춤을 떠올려<br>
+그럼 언제든 눈을 감고<br>
+음 가장 먼 곳으로 가요<br>
+<br>
+
+		</p>
+		</div>
+		<audio src="IU.mp3" id="IU" loop></audio>
+	</section>
+	<div id="monitor"></div>
+</body>
+<script type="text/javascript">
+	
+		for(var i=0; i<30; i++){
+			var a = circle.cloneNode(true);
+			a.id = i;
+			a.style.animationDuration = Math.random()*20 + "s";
+			a.style.left = Math.random()*1400 + "px";
+			a.style.top = Math.random()*800 + "px";
+			var dd = Math.random()*150 + "px";
+			a.style.width = dd;
+			a.style.height = dd;
+			a.style.background = rgbmake();
+			document.body.appendChild(a);
+
+
+		}
+
+		for(var i=0; i<4; i++){
+		var tt = star.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDelay = i*1 + "s";
+		tt.style.left = i*0+ "10px";
+		tt.style.right = i*0 + "10px";
+		tt.style.width = i*2 + "s";
+		tt.style.height = i*3 + "s";
+		// 거리를 랜덤하게 Math.random()*400 + "px";
+		//i*10은 순서대로 떨어지게 할 수 있음!
+		tt.style.animationDuration = i*1+ "s";
+		document.body.appendChild(tt);
+		//시간을 랜덤하게 Math.random() + "s";
+	}
+		//투명도 랜덤 a();= Math.random();임 
+
+		
+
+		function rgbmake(){
+		var a = Math.random()*255;
+		//지정된 색상 안에서만 하고 싶으면
+		var b = Math.random()*120;
+		var c = Math.random()*255;
+		//마음에 안드는 색상이 있으면 var c =0하면 됨 
+		var d = "rgb(" + a + "," + b + "," + c + ")"
+		return d;
+		}
+
+		window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop; 
+		monitor.innerHTML = t + "px";
+		console.log(t);
+		if(t > 40) {main.style.animation = "main 1s forwards";}
+		if(t > 10) {cl1.style.animation = "cl1 1s forwards";}
+		if(t > 80) {cl2.style.animation = "cl2 1s forwards";}
+		if(t > 60) {cl3.style.animation = "cl3 1s forwards";
+		}
+		
+		else{main.style.animation = "";
+			cl1.style.animation = "";
+			cl2.style.animation = "";
+			cl3.style.animation = "";
+			}
+
+		
+
+		if(t > 700) {section2.style.transform ="rotate(180deg)";}
+		else{section2.style.transform = "rotate(0deg)";}
+
+		if(t > 1300) {main2.style.animation = "main2 1s forwards";}
+		if(t > 1350) {cl21.style.animation = "cl21 1s forwards";}
+		if(t > 1300) {cl22.style.animation = "cl22 1s forwards";}
+		if(t > 1500) {cl32.style.animation = "cl32 1s forwards";}
+		if(t > 1500) {rmflawk.style.animation = "rmflawk 1s forwards";}
+		
+		else{
+			main2.style.animation = "";
+			cl21.style.animation = "";
+			cl22.style.animation = "";
+			cl32.style.animation = "";
+			rmflawk.style.animation = "";}}
+	
+		//일단 1000을 해버리고 1초 있다가 실행하는 그런 식이어서 밑에 function식으로 막아줘야함 
+
+		var main2state= "off";
+		IU.volume = 0.4;
+    	main2.onclick= function(){
+		if(main2state == "off"){
+			IU.play(); main2state="on";
+			main2.style.opacity=0.95;
+			;}
+		else{IU.pause(); main2state="off";
+		main2.style.opacity="0.3";
+		main2.style.animation=0;
+			}}
+		
+	</script>
+	<footer>
+		<p>디지털 퍼블리싱2 / 2019.10.22/ IMnabang</p>
+	</footer>
+</html>
